@@ -48,6 +48,8 @@ Route::prefix('/admin')->group(function () {
     Route::get('xoa-lien_he/{id}', 'ContactController@xoaLienHe')->name('xoaLienHe');
     Route::get('/index-contact', 'ContactController@danhSachLienHe')->name('danhSachLH');
     Route::get('/index-book', 'BookController@indexBook')->name('index_user');
+    Route::get('/find-blog', 'BlogController@find_blog')->name('find_blog');
+    Route::get('/find-tour', 'TourController@find_tour')->name('find_tour');
 });
 Route::prefix('/')->group(function () {
     Route::get('/blog','BlogController@index');

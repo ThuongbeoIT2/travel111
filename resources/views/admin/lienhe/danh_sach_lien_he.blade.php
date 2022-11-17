@@ -24,6 +24,9 @@
                             aria-label="Country: activate to sort column ascending">Email
                         </th>
                         <th class="" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                            aria-label="Country: activate to sort column ascending">Ngày gửi
+                        </th>
+                        <th class="" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
                             aria-label="Status: activate to sort column ascending" style="width: 70%">Nội dung
                         </th>
 
@@ -47,7 +50,7 @@
                             <td>{{ $item->contact_name }}</td>
 
                             <td> {{ $item->contact_email }}</td>
-
+                            <td>{{ $item->contact_date }}</td>
                             <td style="width: 300px">{{$item->contact_content}}</td>
                             <td>
 

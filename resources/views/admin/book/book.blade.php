@@ -55,7 +55,6 @@
                             
                             <td> {{ $item->tour_title }}</td>
                         </tr>
-
                     @endforeach
                     </tbody>
                 </table>

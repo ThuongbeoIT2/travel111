@@ -23,6 +23,7 @@ class ContactController extends Controller
             'contact_name' => $request->name,
             'contact_email'=> $request->email,
             'contact_content' =>$request->text_content,
+            'contact_date' => date('y-m-d h:i:s')
         ]);
         $success = 'Sent success. Thanks for filling out our form!!!';
         return view('contact.contact', compact('success'));

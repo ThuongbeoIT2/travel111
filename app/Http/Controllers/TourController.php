@@ -19,4 +19,16 @@ class TourController extends Controller
             ->where('tour_slug','=',$slug)->first();
         return view('tour.tour_detail',compact('t'));
     }
+
+    public function find_tour(Request $request){
+       
+        $search_text = $request->s;
+        $tours = DB::table('hwp_tour')
+                    ->where('tour_title', 'like', '%' . $search_text . '%')
+                    ->orWhere('tour_title', 'like', '%' . ucfirst($search_text) . '%')
+                    ->orderBy('id', 'desc')->get()->toArray();
+                    $mess = "Kết quả tìm kiếm: ". $search_text;
+            return view('tour.list_tour',compact('tours','mess'));  
+        
+    }
 }
